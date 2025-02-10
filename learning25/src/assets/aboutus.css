@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-content {
+  background-color: gray;
+  color: white;
+  width: 50%;
+  padding: 40px;
+}
+
+img {
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+}
