@@ -37,7 +37,7 @@ const Form1 = () => {
       <div>
         <label>Phone No.</label>
         <input
-          type="phone"
+          type="number"
           placeholder="Enter your phone number"
           onChange={(event) => {
             setphone(event.target.value);
