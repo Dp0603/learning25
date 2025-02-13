@@ -12,6 +12,10 @@ import FormDemo1 from './components/forms/FormDemo1'
 import FormDemo2 from './components/forms/FormDemo2'
 import FormDemo3 from './components/forms/FormDemo3'
 import FormDemo4 from './components/forms/FormDemo4'
+import HWFormDemo1 from './components/forms/HWFormDemo1'
+import HWFormDemo2 from './components/forms/HWFormDemo2'
+import HWFormDemo3 from './components/forms/HWFormDemo3'
+import HWFormDemo4 from './components/forms/HWFormDemo4'
 
 
 function App() {
@@ -30,6 +34,10 @@ function App() {
       <Route path='/formdemo2' element={<FormDemo2/>}></Route>
       <Route path='/formdemo3' element={<FormDemo3/>}></Route>
       <Route path='/formdemo4' element={<FormDemo4/>}></Route>
+      <Route path='/hwformdemo1' element={<HWFormDemo1/>}></Route>
+      <Route path='/hwformdemo2' element={<HWFormDemo2/>}></Route>
+      <Route path='/hwformdemo3' element={<HWFormDemo3/>}></Route>
+      <Route path='/hwformdemo4' element={<HWFormDemo4/>}></Route>
       </Routes>
     </div>
   )
