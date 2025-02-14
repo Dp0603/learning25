@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const FormDemo1 = () => {
@@ -7,9 +7,13 @@ const FormDemo1 = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [output, setOutput] = useState();
+  const [isSubmitted, setisSubmitted] = useState(false);
 
   const submitHandler = (data) => {
     console.log(data);
+    setOutput(data);
+    setisSubmitted(true);
   };
 
   const validationSchema = {
@@ -51,9 +55,9 @@ const FormDemo1 = () => {
           <input
             type="text"
             placeholder="Enter name"
-            {...register("firstname", validationSchema.name)}
+            {...register("name", validationSchema.name)}
           />
-          <span style={{ color: "red" }}>{errors.firstname?.message}</span>
+          <span style={{ color: "red" }}>{errors.name?.message}</span>
         </div>
 
         <div>
@@ -65,11 +69,22 @@ const FormDemo1 = () => {
           />
           <span style={{ color: "red" }}>{errors.age?.message}</span>
         </div>
-
+        <div>
+          <label>Color</label>
+          <input type="color" {...register("color")}></input>
+        </div>
         <div>
           <input type="submit" value="Submit" />
         </div>
       </form>
+      {isSubmitted == true ? (
+        <div style={{ color: output.color }}>
+          <h1>Name = {output?.name}</h1>
+          <h2>Age = {output?.age}</h2>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
