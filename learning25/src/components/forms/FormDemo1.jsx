@@ -18,7 +18,10 @@ const FormDemo1 = () => {
 
   const validationSchema = {
     name: {
-      required: "Name is required",
+      required:{
+        value:true,
+        message:"Name is requried",
+      },
       minLength: {
         value: 3,
         message: "Name must be at least 3 characters",
@@ -28,8 +31,12 @@ const FormDemo1 = () => {
         message: "Name cannot exceed 30 characters",
       },
     },
+  
     age: {
-      required: "Age is required",
+      required:{
+        value:true,
+        message:"Age is requried"
+      },
       pattern: {
         value: /^[0-9]+$/,
         message: "Age must be a number",
@@ -41,6 +48,16 @@ const FormDemo1 = () => {
       max: {
         value: 100,
         message: "Age cannot exceed 100",
+      },
+    },
+  
+    refcodeValidator: {
+      required: {
+        value: true,
+        message: "Refcode is required",
+      },
+      validate: (value) => {
+        return value == "royal" || "code must be royal only";
       },
     },
   };
@@ -68,6 +85,19 @@ const FormDemo1 = () => {
             {...register("age", validationSchema.age)}
           />
           <span style={{ color: "red" }}>{errors.age?.message}</span>
+        </div>
+        <div>
+          <label>Ref Code</label>
+          <input
+            type="text"
+            placeholder="Enter your Ref code"
+            {...register("refcode", validationSchema.refcodeValidator)}
+          >
+         
+          </input>
+          <span style={{ color: "red" }}>
+              {errors.refcode?.message}
+            </span>
         </div>
         <div>
           <label>Color</label>
