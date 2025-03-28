@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    max-width: 1140px;
+  }
+  
+  /* Header Section */
+  .header-section .movie-title {
+    font-size: 3rem;
+    color: #f1c40f;
+    text-transform: uppercase;
+  }
+  
+  .header-section .movie-meta {
+    font-size: 1.1rem;
+    color: #aaa;
+  }
+  
+  /* Poster and Summary Section */
+  .poster {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-plot {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+  }
+  
+  /* IMDb Rating */
+  .imdb-rating {
+    font-size: 1.8rem;
+    color: #f39c12;
+  }
+  
+  .imdb-rating:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  /* Cast & Crew Section */
+  .cast-crew-section h5 {
+    font-size: 1.2rem;
+    color: #f1c40f;
+  }
+  
+  .cast-crew-section p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  /* Additional Details Section */
+  .additional-details-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .additional-details-section h5 {
+    font-size: 1.2rem;
+    color: #f1c40f;
+  }
+  
+  /* Ratings Section */
+  .rating-card {
+    background-color: #222;
+    color: #ccc;
+  }
+  
+  .card-title {
+    color: #f1c40f;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+  }
+  
+  /* Production Section */
+  .production-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Hover Effects for Interactivity */
+  .card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .poster:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .movie-title:hover {
+    color: #e67e22;
+    cursor: pointer;
+  }
+  

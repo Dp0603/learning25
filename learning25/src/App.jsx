@@ -19,6 +19,12 @@ import HWFormDemo4 from './components/forms/HWFormDemo4'
 import { SearchMovie } from './components/apis/omdb/SearchMovie'
 import { MovieDetails } from './components/apis/omdb/MovieDetails'
 import { ApiDemo1 } from './components/apis/ApiDemo1'
+import FindMovies from './components/apis/omdb/FindMovies'
+import ViewDetails from './components/apis/omdb/ViewDetails'
+import ApiDemo2 from './components/apis/omdb/ApiDemo2'
+import ApiDemo3 from './components/apis/omdb/ApiDemo3'
+import Login from './components/apis/Login'
+
 
 
 
@@ -45,6 +51,11 @@ function App() {
       <Route path="/apidemo1" element ={<ApiDemo1/>}></Route>
       <Route path='/searchmovies' element={<SearchMovie/>}></Route>
       <Route path='/moviedetails/:id' element={<MovieDetails/>}></Route>
+      <Route path='/findmovies' element={<FindMovies/>}></Route>
+      <Route path='/viewdetails/:id' element={<ViewDetails/>}></Route>
+      <Route path='/apidemo2' element={<ApiDemo2/>}></Route>
+      <Route path='/apidemo3' element={<ApiDemo3/>}></Route>
+      <Route path="/login" element={<Login/>} />
       </Routes>
     </div>
   )
